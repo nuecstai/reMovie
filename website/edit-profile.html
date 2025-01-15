@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Movie">
+  <meta name="keywords" content="Movie, creative, html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>reMovie</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+  <!-- Css Styles -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+  <link rel="stylesheet" href="css/plyr.css" type="text/css">
+  <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+  <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+
+  <style>
+    .edit-profile-container {
+      max-width: 500px;
+      margin: 50px auto;
+      background: #1a1a1a; /* Dark gray background for the container */
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+      color: #fff; /* White text inside the container */
+    }
+
+    .edit-profile-container h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      text-align: center;
+      color: #fff; /* White text for the heading */
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #444; /* Dark border for input fields */
+      border-radius: 5px;
+      background-color: #333; /* Dark background for input fields */
+      color: #fff; /* White text for input fields */
+    }
+
+    .form-control::placeholder {
+      color: #bbb; /* Light gray placeholder text */
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+<!-- Page Preloder -->
+<div id="preloder">
+  <div class="loader"></div>
+</div>
+
+<!-- Header Section Begin -->
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2">
+        <div class="header__logo">
+          <a href="./index.html">
+            <img src="img/logo.png" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="header__nav">
+          <nav class="header__menu mobile-menu">
+            <ul>
+              <li class="active"><a href="./index.html">Homepage</a></li>
+              <li><a>Categories <span class="arrow_carrot-down"></span></a>
+                <ul class="dropdown" id="genre-dropdown">
+                  <!-- Genres -->
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="header__right">
+          <a href="#" class="search-switch"><span class="icon_search"></span></a>
+          <!-- User Profile and Login Button Section -->
+          <div class="user-icon-container">
+            <i class="fa fa-user-circle" id="userIcon" style="font-size: 24px; cursor: pointer; color: white"></i>
+            <div id="userDropdown" class="dropdown-menu">
+              <span id="usernameDisplay"></span>
+              <button onclick="window.location.href = 'profile.html' ">Profile</button>
+              <button onclick="logout()">Logout</button>
+            </div>
+            <button id="loginButton" onclick="window.location.href = 'login.html'">Login</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu-wrap"></div>
+  </div>
+</header>
+<!-- Header End -->
+
+<!-- Product Section Begin -->
+<section class="product-page spad">
+  <div style="margin-left: 150px; margin-right: 150px">
+    <div>
+      <div class="product__page__content">
+        <div class="edit-profile-container">
+          <h2>Edit Profile</h2>
+          <form id="edit-profile-form">
+            <div>
+              <label for="new-username">New Username (optional):</label>
+              <input type="text" id="new-username" class="form-control">
+            </div>
+            <div>
+              <label for="new-password">New Password (optional):</label>
+              <input type="password" id="new-password" class="form-control">
+            </div>
+            <button type="submit" class="btn">Update Profile</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Product Section End -->
+
+<!-- Footer Section Begin -->
+<footer class="footer">
+  <div class="page-up">
+    <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
+  </div>
+</footer>
+<!-- Footer Section End -->
+
+<!-- Search model Begin -->
+<div class="search-model">
+  <div class="h-100 d-flex align-items-center justify-content-center">
+    <div class="search-close-switch"><i class="icon_close"></i></div>
+    <form class="search-model-form" onsubmit="handleSearchSubmit(event)">
+      <input type="text" id="search-input" placeholder="Search here....." onkeydown="handleEnterKey(event)" />
+    </form>
+  </div>
+</div>
+<!-- Search model end -->
+
+
+<!-- Js Plugins -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.nice-select.min.js"></script>
+<script src="js/mixitup.min.js"></script>
+<script src="js/jquery.slicknav.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/categories.js"></script>
+<script src="js/showUser.js"></script>
+<script src="js/search.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+
+<script>
+  // Fetch the token from localStorage
+  const token = localStorage.getItem('jwtToken');
+
+  if (token) {
+    try {
+      // Decode the token to extract the username
+      const decoded = jwt_decode(token);
+      const username = decoded.sub || decoded.name || decoded.Username;
+
+      // Update the placeholder for the "New Username" input field
+      document.getElementById('new-username').value = username;
+
+    } catch (err) {
+      console.error('Error decoding token:', err);
+      alert('Invalid token. Please log in again.');
+      window.location.href = 'login.html';
+    }
+  } else {
+    alert('No token found. Please log in.');
+    window.location.href = 'login.html';
+  }
+</script>
+
+<script>
+  document.getElementById('edit-profile-form').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const newUsername = document.getElementById('new-username').value;
+    const newPassword = document.getElementById('new-password').value;
+
+    if (!newUsername && !newPassword) {
+      alert('Please enter at least one field to update.');
+      return;
+    }
+
+    try {
+      const response = await fetch('http://localhost:5000/api/auth/edit-profile', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify({
+          NewUsername: newUsername,
+          NewPassword: newPassword
+        })
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert(data.message || 'Profile updated successfully!');
+
+        // Update the token in localStorage
+        if (data.token) {
+          localStorage.setItem('jwtToken', data.token);
+        }
+
+        window.location.href = 'profile.html'; // Redirect to profile page
+      } else {
+        alert(data.message || 'Failed to update profile.');
+      }
+    } catch (err) {
+      console.error('Error:', err);
+      alert('An error occurred while updating your profile. Please try again.');
+    }
+  });
+</script>
+
+</body>
+
+</html>

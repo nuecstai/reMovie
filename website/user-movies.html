@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Movie">
+    <meta name="keywords" content="Movie, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>reMovie</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/plyr.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+<!-- Page Preloder -->
+<div id="preloder">
+    <div class="loader"></div>
+</div>
+
+<!-- Header Section Begin -->
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="header__logo">
+                    <a href="./index.html">
+                        <img src="img/logo.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="header__nav">
+                    <nav class="header__menu mobile-menu">
+                        <ul>
+                            <li class="active"><a href="./index.html">Homepage</a></li>
+                            <li><a>Categories <span class="arrow_carrot-down"></span></a>
+                                <ul class="dropdown" id="genre-dropdown">
+                                    <!-- Genres -->
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="header__right">
+                    <a href="#" class="search-switch"><span class="icon_search"></span></a>
+                    <!-- User Profile and Login Button Section -->
+                    <div class="user-icon-container">
+                        <i class="fa fa-user-circle" id="userIcon" style="font-size: 24px; cursor: pointer; color: white"></i>
+                        <div id="userDropdown" class="dropdown-menu">
+                            <span id="usernameDisplay"></span>
+                            <button onclick="window.location.href = 'user-movies.html' ">Your Lists</button>
+                            <button onclick="logout()">Logout</button>
+                        </div>
+                        <button id="loginButton" onclick="window.location.href = 'login.html'">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+    </div>
+</header>
+<!-- Header End -->
+
+<!-- Product Section Begin -->
+<section class="product-page spad">
+    <div style="margin-left: 150px; margin-right: 150px">
+        <div>
+            <div class="product__page__content">
+                <div class="product__page__title">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-8 col-sm-6">
+                            <div class="section-title">
+                                <h4 id="section-title">Favourite Movies</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style= "padding-bottom: 30px; display: flex; flex-wrap: wrap; flex-direction: row" id="favourite-movies-container">
+                    <!-- Movies -->
+                </div>
+                <div class="product__page__title">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-8 col-sm-6">
+                            <div class="section-title">
+                                <h4>Movies in Watchlist</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style= "display: flex; flex-wrap: wrap; flex-direction: row" id="watchlist-container">
+                    <!-- Movies -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Product Section End -->
+
+<!-- Footer Section Begin -->
+<footer class="footer">
+    <div class="page-up">
+        <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
+    </div>
+</footer>
+<!-- Footer Section End -->
+
+<!-- Search model Begin -->
+<div class="search-model">
+    <div class="h-100 d-flex align-items-center justify-content-center">
+        <div class="search-close-switch"><i class="icon_close"></i></div>
+        <form class="search-model-form" onsubmit="handleSearchSubmit(event)">
+            <input type="text" id="search-input" placeholder="Search here....." onkeydown="handleEnterKey(event)" />
+        </form>
+    </div>
+</div>
+<!-- Search model end -->
+
+
+<!-- Js Plugins -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.nice-select.min.js"></script>
+<script src="js/mixitup.min.js"></script>
+<script src="js/jquery.slicknav.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/categories.js"></script>
+<script src="js/showUser.js"></script>
+<script src="js/getFavourites.js"></script>
+<script src="js/getWatchlist.js"></script>
+<script src="js/search.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+
+</body>
+
+</html>
