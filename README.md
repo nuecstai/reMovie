@@ -1,6 +1,7 @@
 # reMovie
-Aynı backend'i kullanan ios ve web uygulamaları
+Kullanıcıların filmleri keşfedip değerlendirebileceği, favori filmlerini kaydedip kendi listelerini oluşturabileceği bir film inceleme platformudur. Proje, kullanıcı hesap yönetimi, film detaylarına erişim, yorum yapma ve liste oluşturma gibi özellikler sunmaktadır.
 
+# Tanıtım Videoları
 
 Projenin web ve IOS için çekilen tanıtım videolarına ana dizinden 'ios_tanıtım' ve 'web_tanıtım' dosyalarından erişilebilir. Ayrıca videolar youtube üzerinden de paylaşılmıştır.
 
@@ -9,6 +10,9 @@ IOS tanıtım videosu -- https://youtube.com/shorts/ejN3-WIUC0Y
 
 
 WEB tanıtım videosu -- https://youtu.be/6xHrffjh3fs
+
+# Dosya Düzeni
+Aynı backend'i kullanan ios ve web uygulamaları..
 
 
 Backend klasörü içerisinde .NET kodları bulunmaktadır. Controller, model yapısında klasörler ve solution eklenmiştir.
