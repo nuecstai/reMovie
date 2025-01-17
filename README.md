@@ -18,3 +18,6 @@ Mobile klasörü içerisinde flutter kodları bulunmaktadır. Bu klasörde ayrı
 
 
 Website klasörü içerisinde html,css kodları bulunmaktadır. Projede kullanılan javascript kodları da /js klasörü altında toplanmıştır.
+
+# API_KEY
+Uygulamanın çalışması için verileri TMDB api kullanarak çekmesi gerekmektedir. Kodda 'YOUR_API_KEY' ile işaretlenmiş yerlere kendi api key'inizi girmeniz gerekmektedir.
